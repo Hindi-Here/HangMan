@@ -28,7 +28,8 @@ namespace hangman
         private void StartClick(object sender, RoutedEventArgs e) // обработка клика "совместной игры"
         {
             if (questionBox.Text != string.Empty && answerBox.Text != string.Empty
-                && questionBox.Text != "Ваш вопрос..." && answerBox.Text != "Ваш ответ...") {
+                && questionBox.Text != "Ваш вопрос..." && answerBox.Text != "Ваш ответ...")
+            {
 
                 Window1 win = new Window1
                 {
@@ -83,20 +84,11 @@ namespace hangman
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        private void MoveForm(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+        private void MoveForm(object sender, MouseButtonEventArgs e) => this.DragMove();
 
-        private void MinimizeForm(object sender, MouseButtonEventArgs e)
-        {
-            SystemCommands.MinimizeWindow(this);
-        }
+        private void MinimizeForm(object sender, MouseButtonEventArgs e) => SystemCommands.MinimizeWindow(this);
 
-        private void CloseForm(object sender, MouseButtonEventArgs e)
-        {
-            this.Close();
-        }
+        private void CloseForm(object sender, MouseButtonEventArgs e) => this.Close();
 
     }
 }
